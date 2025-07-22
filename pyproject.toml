@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "duck-tape"
+version = "0.1.0"
+description = "Tapes all your disparate data sources together into a single, queryable DuckDB catalog."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+# Core dependencies
+pandas = ">=2.3.1"
+duckdb = ">=1.3.2"
+PyYAML = ">=6.0.2"
+openpyxl = ">=3.1.5"
+lxml = ">=6.0.0"
+html5lib = ">=1.1"
+Markdown = ">=3.8.2"
+pyarrow = ">=21.0.0"
+fastavro = ">=1.11.1"
+watchdog = ">=6.0.0"
+requests = ">=2.32.4"
+s3fs = ">=2025.7.0"
+
+# Optional dependency for PDF processing
+camelot-py = {version = ">=1.0.0", extras = ["cv"], optional = true}
+
+[tool.poetry.extras]
+# To install with PDF support, use: pip install duck-tape[pdf]
+pdf = ["camelot-py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
