@@ -141,7 +141,7 @@ python duck\_tape.py \--config prod\_config.yaml \--build
 
 **2\. Watch Mode**
 
-For local development, you can run the watcher. It will perform an initial build and then continue running, monitoring local source directories and polling remote sources, updating the DuckDB catalog in real-time.
+For local development or in production, you can run the watcher. It will perform an initial build and then continue running, monitoring local source directories and polling remote sources, updating the DuckDB catalog in real-time.
 
 python duck\_tape.py \--watch
 
